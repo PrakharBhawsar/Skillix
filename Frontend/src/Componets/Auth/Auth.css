@@ -1,0 +1,127 @@
+.Login-main {
+    display: flex;
+    flex-direction: row;
+}
+
+.Login-website-name {
+    width: 50%;
+    height: 100vh;
+    background-size: cover;
+    background-color: black;
+    color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn 1s ease-in-out;
+    font-size: 20px;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.Login-app-container {
+    display: flex;
+    height: 100vh;
+    margin-left: 15%;
+    justify-content: center;
+    align-items: center;
+}
+
+.Login-container {
+    flex: 1;
+    text-align: center;
+    padding: 20px;
+}
+
+.Login-card {
+    max-width: 300px;
+    width: 100%;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.Login-card:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.Login-input,
+.Login-btn {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: border-color 0.3s ease-in-out, background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.Login-input:focus,
+.Login-btn:focus {
+    outline: none;
+    border-color: #000;
+}
+
+.Login-btn {
+    background-color: purple;
+    color: #fff;
+    cursor: pointer;
+}
+
+.Login-btn:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+#toggle-switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+#toggle-slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 34px;
+}
+
+#toggle-slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: #fff;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked + #toggle-slider {
+    background-color: #000;
+}
+
+input:checked + #toggle-slider:before {
+    transform: translateX(26px);
+}
+
+@media screen and (max-width: 600px) {
+    .Login-website-name {
+        display: none;
+    }
+}
